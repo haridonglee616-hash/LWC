@@ -1,0 +1,57 @@
+<template>
+
+    <lightning-card title="Opportunity Stage Distribution">
+
+        <div class="chart-container">
+
+            <template if:true={bars}>
+
+                <svg width="900" height="350">
+
+                    <line
+                        x1="40"
+                        y1="300"
+                        x2="850"
+                        y2="300"
+                        stroke="black">
+                    </line>
+
+                    <template for:each={bars} for:item="bar">
+
+                        <g key={bar.label}>
+
+                            <rect
+                                x={bar.x}
+                                y={bar.y}
+                                width="50"
+                                height={bar.height}
+                                class="bar">
+                            </rect>
+
+                            <text
+                                x={bar.labelX}
+                                y="325"
+                                class="label">
+                                {bar.shortLabel}
+                            </text>
+
+                            <text
+                                x={bar.valueX}
+                                y={bar.valueY}
+                                class="value">
+                                {bar.value}
+                            </text>
+
+                        </g>
+
+                    </template>
+
+                </svg>
+
+            </template>
+
+        </div>
+
+    </lightning-card>
+
+</template>

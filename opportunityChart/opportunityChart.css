@@ -1,0 +1,21 @@
+.chart-container {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.bar {
+    fill: #0176D3;
+}
+
+.bar:hover {
+    fill: #014486;
+}
+
+.label {
+    font-size: 10px;
+}
+
+.value {
+    font-size: 11px;
+    font-weight: bold;
+}

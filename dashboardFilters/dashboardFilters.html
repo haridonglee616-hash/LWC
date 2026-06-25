@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Dashboard Filters">
+
+        <div class="slds-p-around_medium">
+
+            <lightning-combobox
+                label="Opportunity Stage"
+                value={selectedStage}
+                options={stageOptions}
+                onchange={handleChange}>
+            </lightning-combobox>
+
+        </div>
+
+    </lightning-card>
+</template>

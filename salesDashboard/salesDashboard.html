@@ -1,0 +1,66 @@
+<template>
+
+    <lightning-card>
+
+        <!-- Filters -->
+        <c-dashboard-filters
+            onstagechange={handleStageChange}>
+        </c-dashboard-filters>
+
+        <!-- KPI Cards -->
+        <div class="slds-grid slds-gutters slds-wrap slds-p-around_medium">
+
+            <!-- Accounts -->
+            <div class="slds-col slds-size_1-of-3">
+                <div class="metric-card">
+                    <div class="metric-title">
+                        <strong>Accounts</strong>
+                    </div>
+                    <div class="metric-value">
+                        <strong>{accountCount}</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Opportunities -->
+            <div class="slds-col slds-size_1-of-3">
+                <div class="metric-card">
+                    <div class="metric-title">
+                        <strong>Opportunities</strong>
+                    </div>
+                    <div class="metric-value">
+                        <strong>{opportunityCount}</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenue -->
+            <div class="slds-col slds-size_1-of-3">
+                <div class="metric-card">
+                    <div class="metric-title">
+                        <strong>Revenue</strong>
+                    </div>
+                    <div class="metric-value">
+                        <strong>{revenue}</strong>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Opportunity Chart -->
+        <div class="slds-p-around_medium">
+            <c-opportunity-chart
+                selected-stage={selectedStage}>
+            </c-opportunity-chart>
+        </div>
+
+        <!-- Account Map -->
+        <div class="slds-p-around_medium">
+            <c-account-map>
+            </c-account-map>
+        </div>
+
+    </lightning-card>
+
+</template>
